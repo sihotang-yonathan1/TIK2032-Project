@@ -30,6 +30,14 @@
     align-items: center;
 }
 
+.align-items-end {
+    align-items: end;
+}
+
+.align-self-end {
+    align-self: flex-end;
+}
+
 .p-0\.5 {
     padding: 0.5rem;
 }
@@ -61,6 +69,14 @@
 
 .w-screen {
     width: 100dvw;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.h-screen {
+    height: 100dvh;
 }
 
 .bg-aqua {
