@@ -51,6 +51,19 @@
     padding-right: 0.75rem;
 }
 
+.m-0\.5 {
+    margin: 0.5rem;
+}
+
+.m-0\.75 {
+    margin: 0.75rem;
+}
+
+.mx-0\.75 {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
 .text-center {
     text-align: center;
 }
