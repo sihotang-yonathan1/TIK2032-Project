@@ -63,6 +63,12 @@
     height: 100dvh;
 }
 
+/* text-align */
+
+.text-center {
+    text-align: center;
+}
+
 /* Background */
 
 .bg-aqua {
