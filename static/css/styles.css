@@ -1,3 +1,12 @@
+:root{
+    /* Source: https://colorhunt.co/palette/f8f6e397e7e16ad4dd7aa2e3 */
+    --primary-color: #F8F6E3; /* beige */
+    --secondary-color: #97E7E1; /*Teal*/
+    --third-color: #6AD4DD;
+    --forth-color: #7AA2E3;
+
+}
+
 a {
     text-decoration: none;
     color: inherit
@@ -5,4 +14,21 @@ a {
 
 body {
     margin: unset;
+}
+
+.header-container {
+    background-color: var(--secondary-color);
+}
+
+.main-content-container {
+    background-color: var(--primary-color);
+}
+
+.footer-container {
+    background-color: var(--secondary-color);
+
+}
+
+.nav-element:hover {
+    color: var(--primary-color);
 }
