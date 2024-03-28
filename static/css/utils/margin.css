@@ -1,0 +1,82 @@
+/* Layouting: margin */
+
+.m-0\.5 {
+    margin: 0.5rem;
+}
+
+.m-0\.75 {
+    margin: 0.75rem;
+}
+
+.mx-0\.25 {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.mx-0\.5 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.mx-0\.75 {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.mx-1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.mx-1\.25 {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+}
+
+.mx-1\.5 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+
+.ml-0\.25 {
+    margin-left: 0.25rem;
+}
+
+.ml-0\.75 {
+    margin-left: 0.75rem;
+}
+
+.ml-1{
+    margin-left: 1rem;
+}
+
+.mr-0\.25 {
+    margin-right: 0.25rem;
+}
+
+.mr-0\.5 {
+    margin-right: 0.5rem;
+}
+
+.mr-0\.75 {
+    margin-right: 0.75rem;
+}
+
+.mr-1 {
+    margin-right: 1rem;
+}
+
+.mr-1\.25 {
+    margin-right: 1.25rem;
+}
+
+.mr-1\.5{
+    margin-right: 1.5rem;
+}
+
+/* text-align */
+
+.text-center {
+    text-align: center;
+}
