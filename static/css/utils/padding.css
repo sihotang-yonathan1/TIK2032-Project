@@ -23,3 +23,19 @@
     padding-left: 0.75rem;
     padding-right: 0.75rem;
 }
+
+.pt-0\.25{
+    padding-top: 0.25rem;
+}
+
+.pt-0\.5{
+    padding-top: 0.5rem;
+}
+
+.pt-0\.75 {
+    padding-top: 0.75rem;
+}
+
+.pt-1{
+    padding-top: 1rem;
+}

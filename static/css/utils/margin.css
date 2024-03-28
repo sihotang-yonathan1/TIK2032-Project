@@ -79,6 +79,10 @@
     margin-top: auto;
 }
 
+.mt-0\.25 {
+    margin-top: 0.25rem;
+}
+
 .mb-auto {
     margin-bottom: auto;
 }
