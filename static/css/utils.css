@@ -96,3 +96,12 @@
 .aspect-ratio-1\:1{
     aspect-ratio: 1/1;
 }
+
+/* border */
+.border {
+    border: 1px;
+}
+
+.rounded-full {
+    border-radius: 99999px;
+}
