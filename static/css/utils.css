@@ -18,7 +18,16 @@
     justify-content: right;
 }
 
-/* Layouting: aling-items */
+/* Layouting: justify-self */
+.justify-self-start {
+    justify-self: flex-start;
+}
+
+.justify-self-center {
+    justify-self: center;
+}
+
+/* Layouting: align-items */
 
 .align-items-center {
     align-items: center;
@@ -26,6 +35,15 @@
 
 .align-items-end {
     align-items: end;
+}
+
+/* Align self */
+.align-self-start {
+    align-self: flex-start;
+}
+
+.align-self-center {
+    align-self: center;
 }
 
 .align-self-end {
