@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./static/css/utils/display/flex.css">
     <link rel="stylesheet" href="./static/css/utils/display/grid.css">
 
+    <!-- Google Material icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
@@ -58,37 +60,42 @@
             <!-- Upper half -->
             
             <!-- Image Description -->
-            <div class="flex flex-col w-full px-0.5 column-start-2 column-end-3">
+            <div class="flex flex-col w-full px-0.5 column-start-2 column-end-3 justify-content-center px-1">
                 <p class="bold">Hello, I am an undergraduate student.</p>
                 <p>I love to making API to make data more accessible</p>
             </div>
-
+            
             <!-- Image parent -->
             <div class="flex w-full column-start-3 column-end-4 mr-1 align-self-start row-start-1 row-end-2">
                 <img class="rounded-full" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihat-mPY9Hoesmjog98z-UoRLyAEJjK1_nXE2oH2rCurTxfDl5w49z2IAzUJCuaq_Hmu76EEXgLsov1JfHaZfQQ1nqTP=w332-h907" />
             </div>
 
             <!-- Bottom Half -->
-            <div class="flex flex-col column-start-2 column-end-4 row-start-2 row-end-3">
-                <h2>Hobbies</h2>
+            <div class="flex flex-col column-start-1 column-end-4 row-start-2 row-end-3 align-items-center w-full">
+                <div>
+                    <h2>Skill</h2>
+                </div>
                 <!-- Hobbies List -->
-                <div class="flex flex-row gap-0.5 justify-content-center w-full">
+                <div class="flex flex-row gap-0.5 justify-content-center relative mr-1">
                     <!-- Hobbies element -->
-                    <div>
-                        <p>Coding</p>
+                    <div class="relative">
+                        <div class="flex flex-col align-items-center skill-element-container justify-content-center rounded">
+                            <span class="material-symbols-outlined material-icons">code</span>
+                            <p class="bold text-center">Coding</p>
+                        </div>
                     </div>
 
-                    <div>
-                        <p>Reading</p>
+                    <div class="flex flex-col align-items-center skill-element-container justify-content-center rounded">
+                        <span class=" material-icons material-symbols-outlined">music_note</span>
+                        <p class="bold text-center">Playing music</p>
                     </div>
 
-                    <div>
-                        <p>Watching Film</p>
+                    <div class="flex flex-col align-items-center skill-element-container justify-content-center rounded">
+                        <span class="material-icons material-symbols-outlined">language</span>
+                        <p class="bold text-center">Learn foreign language</p>
                     </div>
                 </div>
             </div>
-            
-
         </div>
 
         <!-- Footer: flex-col -->

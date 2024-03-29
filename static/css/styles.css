@@ -31,3 +31,18 @@ body {
 .nav-element:hover {
     color: var(--primary-color);
 }
+
+.skill-element-container {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 1.2rem;
+    width: 100px;
+    height: 100px;
+}
+
+.skill-element-container:hover{
+    background-color: white;
+    color: black;
+    
+}

@@ -18,3 +18,11 @@
 .flex-grow-1 {
     flex-grow: 1;
 }
+
+.flex-shrink-1 {
+    flex-shrink: 1;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
