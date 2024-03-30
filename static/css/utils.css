@@ -135,3 +135,40 @@
     border-radius: 99999px;
 }
 
+
+/* Font size */
+.font-x-sm {
+    font-size: smaller;
+}
+
+.font-2x-sm{
+    font-size: xx-small;
+}
+
+.font-3x-sm {
+    font-size: xx-small;
+}
+
+.font-sm {
+    font-size: small;
+}
+
+.font-md {
+    font-size: medium;
+}
+
+.font-lg {
+    font-size: large;
+}
+
+.font-x-lg {
+    font-size: larger;
+}
+
+.font-2x-lg {
+    font-size: x-large;
+}
+
+.font-3x-lg{
+    font-size: xx-large;
+}
