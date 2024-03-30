@@ -72,6 +72,10 @@
     font-weight: bold;
 }
 
+.italic {
+    font-style: italic;
+}
+
 /* Layouting: width */
 
 .w-full {
@@ -130,3 +134,4 @@
 .rounded-full {
     border-radius: 99999px;
 }
+
