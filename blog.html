@@ -21,100 +21,101 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <!-- Body structure: flex-col -->
-    <div class="flex flex-col">
-        <!-- Header: flex-row -->
-        <div class="grid grid-template-column-4 grid-template-row-1 align-items-center px-0.75 header-container">
-            <!-- Initial name -->
-            <div class="column-start-1 column-end-2 pl-0.5">
-                <div class="flex flex-row justify-content-left">
-                    <h3 class="uppercase">y</h3>
+    <div class="flex flex-col h-screen">
+        <!-- Body structure: flex-col -->
+        <div class="flex flex-col">
+            <!-- Header: flex-row -->
+            <div class="grid grid-template-column-4 grid-template-row-1 align-items-center px-0.75 header-container">
+                <!-- Initial name -->
+                <div class="column-start-1 column-end-2 pl-0.5">
+                    <div class="flex flex-row justify-content-left">
+                        <h3 class="uppercase">y</h3>
+                    </div>
                 </div>
 
-            </div>
-
-            <div class="column-start-4 column-end-5 pl-1.75">
-                <!-- Nav link: flex-row -->
-                <div class="flex flex-row gap-0.75 justify-content-center">
-                    <!-- Nav element -->
-                    <div class="nav-element">
-                        <a href="./index.html">Home</a>
-                    </div>
-                    
-                    <div class="nav-element align-self-end">
-                        <a href="./gallery.html">Gallery</a>
-                    </div>
-                    
-                    <div class="nav-element">
-                        <a href="./blog.html" class="bold">Blog</a>
-                    </div>
-                    
-                    <div class="nav-element">
-                        <a href="./contact.html">Contact</a>
+                <div class="column-start-4 column-end-5 pl-1.75">
+                    <!-- Nav link: flex-row -->
+                    <div class="flex flex-row gap-0.75 justify-content-center">
+                        <!-- Nav element -->
+                        <div class="nav-element">
+                            <a href="./index.html">Home</a>
+                        </div>
+                        
+                        <div class="nav-element align-self-end">
+                            <a href="./gallery.html">Gallery</a>
+                        </div>
+                        
+                        <div class="nav-element">
+                            <a href="./blog.html" class="bold">Blog</a>
+                        </div>
+                        
+                        <div class="nav-element">
+                            <a href="./contact.html">Contact</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Main content: flex-row -->
-    <div>
-        <!-- Blog Element -->
-        <div>
-            <h3>Blog List</h3>
+        <!-- Main content: flex-row -->
+        <div class="flex flex-col main-content-container">
+            <!-- Blog Element -->
             <div>
-                <h3>Performa single core Intel Meteor Lake lebih rendah dibanding pendahulunya</h3>
+                <h3>Blog List</h3>
+                <div>
+                    <h3>Performa single core Intel Meteor Lake lebih rendah dibanding pendahulunya</h3>
+                    <div>
+                        <p>Updated at March 23, 2024</p>
+                    </div>
+                    <p>Munculnya intel Meteor Lake membuat orang bertanya-tanya mengenai performa yang diberikan. Berdasarkan hasil sampel yang diberikan intel dalam model laprop Asus Zenbook, terdapat sedikit penurunan performa single corenya. </p>
+                    <p>Pihak Intel sendiri membuat CPU ini dengan fokus untuk menambah efisiensi daya dibanding generasi-generasi sebelumnya.</p>
+                    <p>Hal ini terbukti dari berbagai benchmark yang telah dibuat, memang benar terjadi peningkatan oerforma per watt-nya, namun performa ini masih kalah dengan laptop yang arsitektur ARM seperti Apple M1</p>
+                    <p>Hadirnya laptop ini, diharapkan membuat laptop dapat digunakan untuk program yang berat namun dapat dipakai dalam jangka waktu yang lebih lama</p>
+                </div>
+            </div>
+
+            <!-- Blog Element -->
+            <div>
+                <h3>One UI 6.1 rilis</h3>
                 <div>
                     <p>Updated at March 23, 2024</p>
                 </div>
-                <p>Munculnya intel Meteor Lake membuat orang bertanya-tanya mengenai performa yang diberikan. Berdasarkan hasil sampel yang diberikan intel dalam model laprop Asus Zenbook, terdapat sedikit penurunan performa single corenya. </p>
-                <p>Pihak Intel sendiri membuat CPU ini dengan fokus untuk menambah efisiensi daya dibanding generasi-generasi sebelumnya.</p>
-                <p>Hal ini terbukti dari berbagai benchmark yang telah dibuat, memang benar terjadi peningkatan oerforma per watt-nya, namun performa ini masih kalah dengan laptop yang arsitektur ARM seperti Apple M1</p>
-                <p>Hadirnya laptop ini, diharapkan membuat laptop dapat digunakan untuk program yang berat namun dapat dipakai dalam jangka waktu yang lebih lama</p>
+                <p>One UI adalah UI yang dibuat oleh Samsung untuk hp buatan mereka. 
+                    Kali ini, mereka membuat update baru yaitu One UI 6.1 yang memungkinkan perangkat flagship 2023 mendapat update yang menarik seperti
+                    Circle to Search yang sebelumnya hadir pada Jajaran S24. Fitur ini sudah dirilis sejak Maret 2024. Pada update ini, terdapat beberapa perbaikan dari update-update berikutnya
+                </p>
             </div>
+            
+            <!-- Blog Element -->
+            <div>
+                <h3>LPCAMM2 jadi standar baru RAM</h3>
+                <div>
+                    <p>Updated at March 23, 2024</p>
+                </div>
+                <p>RAM merupakan salah satu bagian penting dari komponen komputer.
+                    Pada umumnya terdapat dua jenis fisik RAM yang umum digunakan sehari-hari. 
+                    Yang pertama adalah RAM yang bertipe SODIMM dengan tipe RAM DDR. 
+                    Ram tipe ini dapat diganti dengan mudah karena pada perangkatnya terdapat slot RAM.
+                    Meskipun RAM ini mudah untuk dipasang, RAM dengan jenis fisik seperti ini memiliki kecepatan yang lebih rendah karena harus menyusuri jalur data yang lebih panjang
+                    Jenis fisik RAM lainnya adalah RAM untuk penggunaan mobile yakni LPDDR. LPDDR adalah jenis RAM yang disolder ke perangkat sehingga tidak dapat diganti.
+                    Keuntungan dari jenis ini adalah jumlah daya yang digunakan lebih kecil dan kecepatan data lebih cepat karena memiliki jalur data yang lebih pendek.
+                </p>
+                <p>Dengan adanya keterbatasan dari kemudahan untuk upgrade dan kecepatan RAM, beberapa vendor berusaha untuk membuat jenis baru.
+                    Salah satunya adalah DELL. Sebelumnya mereka mengumumkan jenis fisik baru, yaitu CAMM.
+                    Saat ini, model CAMM hanya terdapat pada model-model tertentu laptop buatan DELL. 
+                    Berikutnya, Samsung mengembang model dari DELL menjadi lebih kecil, model ini disebut Samsung sebagai LPCAMM.
+                    Model ini lebih kecil dari CAMM, namun lebih cepat dan efisien dibanding model CAMM buatan DELL. 
+                    Kemudian, Micron mengembangkan model baru yang bernama LPCAMM2 dan dipamerkan CES2024. 
+                    JEDEC kemudian menyetujui LPCAMM2 sebagai model standar baru RAM berikutnya
+                </p>
+            </div>
+            
         </div>
 
-        <!-- Blog Element -->
-        <div>
-            <h3>One UI 6.1 rilis</h3>
-            <div>
-                <p>Updated at March 23, 2024</p>
-            </div>
-            <p>One UI adalah UI yang dibuat oleh Samsung untuk hp buatan mereka. 
-                Kali ini, mereka membuat update baru yaitu One UI 6.1 yang memungkinkan perangkat flagship 2023 mendapat update yang menarik seperti
-                Circle to Search yang sebelumnya hadir pada Jajaran S24. Fitur ini sudah dirilis sejak Maret 2024. Pada update ini, terdapat beberapa perbaikan dari update-update berikutnya
-            </p>
+       <!-- Footer: flex-col -->
+        <div class="flex flex-col justify-content-center align-items-center footer-container">
+            <p class="text-center font-sm">Created by: <span class="bold">Yonathan Sihotang</span></p>
         </div>
-        
-        <!-- Blog Element -->
-        <div>
-            <h3>LPCAMM2 jadi standar baru RAM</h3>
-            <div>
-                <p>Updated at March 23, 2024</p>
-            </div>
-            <p>RAM merupakan salah satu bagian penting dari komponen komputer.
-                Pada umumnya terdapat dua jenis fisik RAM yang umum digunakan sehari-hari. 
-                Yang pertama adalah RAM yang bertipe SODIMM dengan tipe RAM DDR. 
-                Ram tipe ini dapat diganti dengan mudah karena pada perangkatnya terdapat slot RAM.
-                Meskipun RAM ini mudah untuk dipasang, RAM dengan jenis fisik seperti ini memiliki kecepatan yang lebih rendah karena harus menyusuri jalur data yang lebih panjang
-                Jenis fisik RAM lainnya adalah RAM untuk penggunaan mobile yakni LPDDR. LPDDR adalah jenis RAM yang disolder ke perangkat sehingga tidak dapat diganti.
-                Keuntungan dari jenis ini adalah jumlah daya yang digunakan lebih kecil dan kecepatan data lebih cepat karena memiliki jalur data yang lebih pendek.
-            </p>
-            <p>Dengan adanya keterbatasan dari kemudahan untuk upgrade dan kecepatan RAM, beberapa vendor berusaha untuk membuat jenis baru.
-                Salah satunya adalah DELL. Sebelumnya mereka mengumumkan jenis fisik baru, yaitu CAMM.
-                Saat ini, model CAMM hanya terdapat pada model-model tertentu laptop buatan DELL. 
-                Berikutnya, Samsung mengembang model dari DELL menjadi lebih kecil, model ini disebut Samsung sebagai LPCAMM.
-                Model ini lebih kecil dari CAMM, namun lebih cepat dan efisien dibanding model CAMM buatan DELL. 
-                Kemudian, Micron mengembangkan model baru yang bernama LPCAMM2 dan dipamerkan CES2024. 
-                JEDEC kemudian menyetujui LPCAMM2 sebagai model standar baru RAM berikutnya
-            </p>
-        </div>
-        
-    </div>
-
-    <!-- Footer: flex-row -->
-    <div>
-        <p>Yonathan Sihotang</p>
     </div>
 </body>
 </html>
