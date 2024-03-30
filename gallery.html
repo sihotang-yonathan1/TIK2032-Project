@@ -18,22 +18,37 @@
     <link rel="stylesheet" href="./static/css/utils/display/grid.css">
 </head>
 <body>
-    <!-- Body structure: flex-row -->
-    <div>
-        <!-- Header: flex-col -->
-        <div>
+    <!-- Body structure: flex-col -->
+    <div class="flex flex-col">
+        <!-- Header: flex-row -->
+        <div class="grid grid-template-column-4 grid-template-row-1 align-items-center px-0.75 header-container">
             <!-- Initial name -->
-            <div>
-                <h3>Y</h3>
+            <div class="column-start-1 column-end-2 pl-0.5">
+                <div class="flex flex-row justify-content-left">
+                    <h3 class="uppercase">y</h3>
+                </div>
+
             </div>
 
-            <div>
-                <!-- Nav link: flex-col -->
-                <div>
-                    <a href="./index.html">Home</a>
-                    <a href="./gallery.html">Gallery</a>
-                    <a href="./blog.html">Blog</a>
-                    <a href="./contact.html">Contact</a>
+            <div class="column-start-4 column-end-5 pl-1.75">
+                <!-- Nav link: flex-row -->
+                <div class="flex flex-row gap-0.75 justify-content-center">
+                    <!-- Nav element -->
+                    <div class="nav-element">
+                        <a href="./index.html" class="bold">Home</a>
+                    </div>
+                    
+                    <div class="nav-element align-self-end">
+                        <a href="./gallery.html">Gallery</a>
+                    </div>
+                    
+                    <div class="nav-element">
+                        <a href="./blog.html">Blog</a>
+                    </div>
+                    
+                    <div class="nav-element">
+                        <a href="./contact.html">Contact</a>
+                    </div>
                 </div>
             </div>
         </div>
