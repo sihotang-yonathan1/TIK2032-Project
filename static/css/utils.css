@@ -172,3 +172,18 @@
 .font-3x-lg{
     font-size: xx-large;
 }
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce {
+    animation-name: 'bounce';
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
