@@ -64,3 +64,8 @@ body {
     background-color: white;
     
 }
+
+.gallery-image-container {
+    width: 500px;
+    aspect-ratio: 16/9;
+}
