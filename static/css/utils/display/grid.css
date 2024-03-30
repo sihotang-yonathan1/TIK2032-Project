@@ -4,6 +4,10 @@
 }
 
 /* Grid template col */
+.grid-template-col-auto {
+    grid-template-columns: auto;
+}
+
 .grid-template-col-1 {
     grid-template-columns: 1;
 }
@@ -21,6 +25,10 @@
 }
 
 /* Grid template row */
+.grid-template-row-auto {
+    grid-template-rows: auto;
+}
+
 .grid-template-row-1 {
     grid-template-rows: 1;
 }
