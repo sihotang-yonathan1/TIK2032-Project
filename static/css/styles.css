@@ -28,6 +28,21 @@ body {
     background-color: var(--secondary-color);
 }
 
+.blog-element-container {
+    border: 1px;
+    border-style: solid;
+    
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+    
+    padding: 0.75rem;
+    border-radius: 1rem;
+}
+
 .nav-element:hover {
     color: grey;
 }
