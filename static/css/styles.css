@@ -69,3 +69,14 @@ body {
     width: 500px;
     aspect-ratio: 16/9;
 }
+
+.index-photo-image {
+    width: 100%;
+}
+
+
+@media screen and (max-width: 400px) {
+    .index-photo-image {
+        height: 25%
+    }
+}
