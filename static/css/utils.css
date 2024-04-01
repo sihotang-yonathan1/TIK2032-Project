@@ -187,3 +187,7 @@
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
+
+.top-0 {
+    top: 0;
+}
