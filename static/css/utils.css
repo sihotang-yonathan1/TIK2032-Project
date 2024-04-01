@@ -191,3 +191,7 @@
 .top-0 {
     top: 0;
 }
+
+.max-w-full {
+    max-width: 100%;
+}
