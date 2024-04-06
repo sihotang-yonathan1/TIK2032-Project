@@ -81,8 +81,8 @@ body {
 }
 
 .gallery-image-container {
-    width: 500px;
     aspect-ratio: 16/9;
+    max-width: 100%;
 }
 
 .index-photo-image {
