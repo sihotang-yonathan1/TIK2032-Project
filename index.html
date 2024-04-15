@@ -64,7 +64,10 @@
             
             <!-- Image Description -->
             <div class="flex flex-col w-full px-0.5 column-start-2 column-end-3 justify-content-center px-1">
-                <p class="bold text-center font-2x-lg">Hello </p>
+                <p class="bold text-center font-2x-lg">
+                    Hello! 
+                    <!-- <span id="role-container"></span> -->
+                </p>
                 <p>I am an undergraduate student. I love to making API to make data more accessible</p>
             </div>
             
@@ -227,6 +230,30 @@
         }
 
         
+    </script>
+    <script>
+        const roles = ['Backend Developer']
+        let role_container = document.getElementById('role-container')
+
+        function showRole(role){
+            let index = 0;
+            const characterInterval = setInterval(() => {
+                if (index < role.length){
+                    role_container.textContent += role[index++];
+                }
+                else {
+                    clearTimeout(characterInterval);
+                }
+            }, 100);
+            
+           
+        }
+        async function typingMain(){
+            for (role of roles){
+                showRole(role);
+            }
+        }
+        typingMain()
     </script>
 </body>
 </html>
