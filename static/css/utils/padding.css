@@ -52,6 +52,11 @@
     padding-right: 8rem;
 }
 
+.px-8\%{
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
 /* padding-top */
 .pt-0\.25{
     padding-top: 0.25rem;
