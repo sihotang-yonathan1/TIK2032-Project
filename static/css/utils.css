@@ -29,6 +29,18 @@
     justify-content: right;
 }
 
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.justify-content-space-around {
+    justify-content: space-around;
+}
+
+.justify-content-space-evenly {
+    justify-content: space-evenly;
+}
+
 /* Layouting: justify-self */
 .justify-self-start {
     justify-self: flex-start;
