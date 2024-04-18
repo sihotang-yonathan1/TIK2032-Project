@@ -90,6 +90,16 @@ body {
     max-width: 800px;
 }
 
+.quote-container {
+    background-color: var(--primary-color);
+    max-width: 600px;
+}
+
+/* Utils */
+.bg-primary-color {
+    background-color: var(--primary-color);
+}
+
 
 @media screen and (max-width: 400px) {
     .index-photo-image {
