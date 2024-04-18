@@ -31,6 +31,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <!-- External js -->
+    <script src="./static/js/typing.js"></script>
+
 </head>
 <body class="poppins">
     <div class="flex flex-col h-screen">
@@ -118,7 +121,7 @@
 
                 <!-- Description -->
                 <div>
-                    <p class="font-weight-300 italic">I am an undergraduate student. I love to making API to make data more accessible</p>
+                    <p class="font-weight-300 italic">I am an <span id="role-container"></span>. I love to making API to make data more accessible</p>
                 </div>
             </div>
             <!-- Image -->
@@ -251,28 +254,15 @@
         
     </script>
     <script>
-        const roles = ['Backend Developer']
+        const roles = ['undergraduate student']
         let role_container = document.getElementById('role-container')
 
-        function showRole(role){
-            let index = 0;
-            const characterInterval = setInterval(() => {
-                if (index < role.length){
-                    role_container.textContent += role[index++];
-                }
-                else {
-                    clearTimeout(characterInterval);
-                }
-            }, 100);
-            
-           
-        }
-        async function typingMain(){
+        function typingMain(){
             for (role of roles){
-                showRole(role);
+                typeString(role, role_container);
             }
         }
-        // typingMain()
+        typingMain()
     </script>
 </body>
 </html>
