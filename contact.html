@@ -37,7 +37,7 @@
 
 </head>
 <body class="poppins">
-    <div class="flex flex-col h-screen">
+    <div class="flex flex-col h-display-screen max-h-content">
         <!-- Header -->
         <div class="flex flex-row px-4% justify-content-space-around align-items-center header-container">
             <div>
@@ -63,15 +63,15 @@
             </div>
         </div>
         
-        <!-- Main content: flex-row -->
+        <!-- Main content: flex-row
         <div class="flex flex-col main-content-container h-full px-0.75">
             <div class="flex justify-content-center">
                 <h2>Contact</h2>
             </div>
-            <!-- Contact List container -->
+            Contact List container
             <div class="grid grid-template-column-auto grid-template-row-auto gap-0.5 justify-content-center overflow-x-auto flex-grow-1">
                 
-                <!-- Contact  container -->
+                Contact  container
                 <div class="contact-container column-start-1 column-end-2 rounded p-0.5">
                     <a href="#" class="flex flex-col align-items-center">
                         <div class="flex icon-image-container">
@@ -84,7 +84,7 @@
                     </a>
                 </div>
                 
-                <!-- Contact  container -->
+                Contact  container
                 <div class="contact-container column-start-2 column-end-3 flex-col align-items-center rounded p-0.5">
                     <a href="#" class="flex flex-col align-items-center">
                         <div class="flex icon-image-container">
@@ -95,7 +95,7 @@
                     </a>
                 </div>
                 
-                <!-- Contact  container -->
+                Contact  container
                 <div class="contact-container column-start-3 column-end-4 flex flex-col align-items-center p-0.5 rounded">
                     <a href="#" class="flex flex-col align-items-center">
                         <div class="flex icon-image-container">
@@ -106,7 +106,7 @@
                     </a>
                 </div>
 
-                <!-- Contact  container -->
+                Contact  container
                 <div class="contact-container flex flex-col align-items-center p-0.5 rounded">
                     <a href="#" class="flex flex-col align-items-center">
                         <div class="flex icon-image-container">
@@ -117,7 +117,7 @@
                     </a>
                 </div>
 
-                <!-- Contact  container -->
+                // // Contact  container
                 <div class="contact-container flex flex-col align-items-center p-0.5 rounded">
                     <a href="#" class="flex flex-col align-items-center">
                         <div class="flex icon-image-container">
@@ -129,7 +129,7 @@
                 </div>
 
                 
-                <!-- Contact  container -->
+                // // Contact  container
                 <div class="contact-container flex flex-col align-items-center p-0.5 rounded">
                     <a href="#" class="flex flex-col align-items-center">
                         <div class="flex icon-image-container">
@@ -144,6 +144,20 @@
             <div class="flex justify-content-center mt-auto">
                 <p class="italic font-2x-sm">*The logo is found from internet</p>
             </div>
+        </div> -->
+        <!-- Main content -->
+        <div class="flex flex-col main-content-container px-8% align-items-center h-full">
+            <!-- Contact Container -->
+            <div class="flex flex-col align-items-center h-full">
+                <!-- Title -->
+                <div>
+                    <h3 class="font-weight-600 text-center">Contact</h3>
+                </div>
+                
+                <!-- Contact List -->
+                <div id="contact-list" class="flex flex-row flex-wrap px-4% gap-0.75 h-full py-3% align-items-center">    
+                </div>
+            </div>
         </div>
 
         <!-- Footer: flex-col -->
@@ -151,5 +165,55 @@
             <p class="text-center font-sm">Created by: <span class="bold">Yonathan Sihotang</span></p>
         </div>
     </div>
+    <script>
+        const contactData = [{
+            'name': 'email',
+            'value': 'email@email.com',
+            'icon': 'email'
+        }, {
+            'name': 'Whatsapp',
+            'value': '+628xxxxxx',
+            'icon': 'whatsapp-color'
+        }, {
+            'name': 'Telegram',
+            'value': '+628xxxxxx',
+            'icon': 'telegram',
+        }, {
+            'name': 'Instagram',
+            'value': '@username',
+            'icon': 'instagram-1'
+        }, {
+            'name': 'Discord',
+            'value': 'username',
+            'icon': 'discord-v2'
+        }, {
+            'name': 'Github',
+            'value': 'username',
+            'icon': 'github-142'
+        }]
+
+        let contactList = document.querySelector("#contact-list");
+
+        function generateContact({name, value, icon}, element){
+            htmlTemplate = `
+            <div class="contact-container flex flex-col align-items-center p-0.5 rounded">
+                <a href="#" class="flex flex-col align-items-center">
+                    <div class="flex icon-image-container">
+                        <img class="max-w-full" src="./assets/icons/${icon}-svgrepo-com.svg" alt="${name}_logo">
+                    </div>
+                    <h4>${name}</h4>
+                    <p>${value}</p>
+                </a>
+            </div>
+            `
+
+            let contactElement = document.createElement('div')
+            contactElement.innerHTML = htmlTemplate
+            
+            element.appendChild(contactElement)
+
+        }
+        contactData.forEach((x) => generateContact({name: x.name, value: x.value, icon: x.icon}, contactList))
+    </script>
 </body>
 </html>
