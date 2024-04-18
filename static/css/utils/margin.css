@@ -40,6 +40,16 @@
     margin-right: 1.5rem;
 }
 
+.mx-10\%{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.mx-33\%{
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
 /* Vertical */
 .my-0 {
     margin-top: 0;
