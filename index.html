@@ -158,6 +158,21 @@
             </div>
         </div>
 
+        <div class="flex flex-col align-items-center px-4% bg-primary-color">
+            <div class="flex flex-col align-items-center bg-primary-color">
+                <h3>Quote</h3>
+                <div>
+                    <q id="quote-text" class="italic">Text</q>
+                </div>
+                <div>
+                    <p class="font-weight-200" id="quote-author-name">Author</p>
+                </div>
+                <div class="font-sm">
+                    <p>Source: <a href="https://api.quotable.io">https://api.quotable.io</a></p>
+                </div>
+            </div>
+        </div>
+
         <!-- Footer: flex-col -->
         <div class="flex flex-col justify-content-center align-items-center footer-container">
             <p class="text-center">Created by: <span class="font-weight-400">Yonathan Sihotang</span></p>
@@ -263,6 +278,19 @@
             }
         }
         typingMain()
+    </script>
+    <script>
+        async function fetchQuote(){
+            let response = await fetch('https://api.quotable.io/random?tags=technology');
+            let data = await response.json();
+            
+            let authorElement = document.querySelector('#quote-author-name');
+            authorElement.textContent = data['author'];
+
+            let quoteElement = document.querySelector("#quote-text");
+            quoteElement.textContent = data['content'];
+        }
+        fetchQuote();
     </script>
 </body>
 </html>
