@@ -185,9 +185,24 @@
 }
 
 /* Background */
+.bg-white {
+    background-color: white;
+}
+
+.bg-whitesmoke {
+    background-color: whitesmoke
+}
 
 .bg-aqua {
     background-color: aqua;
+}
+
+.bg-\[\#eaeaea\]{
+    background-color: #eaeaea;
+}
+
+.bg-\[\#7aa2e3\]{
+    background-color: #7AA2E3;
 }
 
 .bg-\[\#f9f871\]{
@@ -310,10 +325,46 @@
     top: 0;
 }
 
+.bottom-0 {
+    bottom: 0;
+}
+
+.left-0 {
+    left: 0;
+}
+
+.right-0 {
+    right: 0;
+}
+
 .max-w-full {
     max-width: 100%;
 }
 
 .h-80dvh {
     height: 80dvh
+}
+
+.z-1 {
+    z-index: 1;
+}
+
+.text-white {
+    color: white
+}
+
+.text-whitesmoke {
+    color: whitesmoke
+}
+
+.text-\[\#e5e5e5\]{
+    color: #e5e5e5;
+}
+
+.text-red {
+    color: red;
+}
+
+.color-inherit {
+    color: inherit;
 }
