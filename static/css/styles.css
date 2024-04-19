@@ -99,9 +99,67 @@ body {
     background-color: var(--primary-color);
 }
 
+.bg-secondary-color {
+    background-color: var(--secondary-color);
+}
+
+.bg-third-color {
+    background-color: var(--third-color);
+}
+
+.bg-forth-color {
+    background-color: var(--forth-color);
+}
+
+/* End of utils */
+
+#menu-icon-container {
+    display: none;
+}
+
+.sidebar-element-selected {
+    color: black;
+}
+
+.sidebar-element{
+    color: #eaeaea;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.sidebar-element:hover {
+    color: black;
+    background-color: #e5e5e5;
+}
+
+.sidebar-link{
+    color: inherit
+}
+
+.sidebar-link:hover{
+    color: inherit;
+}
+
+#sidebar-menu-list-container {
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+#sidebar-container {
+    display: none;
+}
 
 @media screen and (max-width: 400px) {
     .index-photo-image {
         height: 25%
+    }
+
+    #normal-menu-container {
+        display: none;
+    }
+
+    #menu-icon-container{
+        display: flex;
+        visibility: visible;
     }
 }
