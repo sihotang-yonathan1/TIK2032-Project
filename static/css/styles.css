@@ -71,8 +71,7 @@ body {
     border: 1px;
     border-style: solid;
     border-color: black;
-    width: 250px;
-    height:150px;
+    min-width: 250px;
 }
 
 .contact-container:hover{
