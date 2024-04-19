@@ -37,7 +37,7 @@
 
 </head>
 <body class="poppins">
-    <div class="flex flex-col h-display-screen max-h-content">
+    <div class="flex flex-col h-display-screen">
         <!-- Header -->
         <div class="flex flex-row px-4% justify-content-space-around align-items-center header-container">
             <div>
@@ -146,16 +146,18 @@
             </div>
         </div> -->
         <!-- Main content -->
-        <div class="flex flex-col main-content-container px-8% align-items-center h-full">
+        <div class="flex flex-col main-content-container px-8% align-items-center flex-grow-1">
             <!-- Contact Container -->
             <div class="flex flex-col align-items-center h-full">
                 <!-- Title -->
-                <div>
+                <div class="flex flex-col">
                     <h3 class="font-weight-600 text-center">Contact</h3>
                 </div>
                 
                 <!-- Contact List -->
-                <div id="contact-list" class="flex flex-row flex-wrap px-4% gap-0.75 h-full py-3% align-items-center">    
+                <div class="flex flex-col flex-grow-1 h-full">
+                    <div id="contact-list" class="flex flex-row flex-wrap px-4% gap-0.75 h-full py-3% align-items-center flex-basis-3 flex-grow-1">    
+                    </div>
                 </div>
             </div>
         </div>
@@ -201,8 +203,10 @@
                     <div class="flex icon-image-container">
                         <img class="max-w-full" src="./assets/icons/${icon}-svgrepo-com.svg" alt="${name}_logo">
                     </div>
-                    <h4>${name}</h4>
-                    <p>${value}</p>
+                    <div>
+                        <h4 class="font-weight-500 text-center">${name}</h4>
+                        <p>${value}</p>
+                    </div
                 </a>
             </div>
             `
