@@ -149,6 +149,10 @@ body {
     display: none;
 }
 
+.programming-language-container {
+    padding: 0.5rem;
+}
+
 @media screen and (max-width: 400px) {
     .index-photo-image {
         height: 25%
