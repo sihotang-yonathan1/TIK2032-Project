@@ -71,32 +71,7 @@
             </div>
             
             <div class="flex flex-col">
-                <div class="grid grid-col-1/3 grid-row-auto gap-0.5">
-                        <!-- Image container -->
-                        <div>
-                            <img class="gallery-image-container" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg/1200px-Altja_j%C3%B5gi_Lahemaal.jpg" alt="nature">
-                        </div>
-
-                        <!-- Image container -->
-                        <div>
-                            <img class="gallery-image-container" src="https://hips.hearstapps.com/hmg-prod/images/nature-quotes-landscape-1648265299.jpg" alt="nature-2">
-                        </div>
-
-                        <!-- Image container -->
-                        <div>
-                            <img class="gallery-image-container" src="https://www.pbs.org/wnet/nature/files/2019/07/Super-Hummingbirds-2-1280x675.jpg" alt="nature-3">
-                        </div>
-
-                        <!-- Image container -->
-                        <div>
-                            <img class="gallery-image-container" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeKSiuquMg7R6uwhBtiyBjaDqw4kXH3R2UZKP9QLMoLA&s" alt="windows-1">
-                        </div>
-
-                        <!-- Image container -->
-                        <div>
-                            <img class="gallery-image-container" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_2557,h_1321/https://assets.ubuntu.com/v1/acdf946a-Screenshot+from+2022-04-18+13-05-17.png" alt="Ubuntu">
-                        </div>
-                    
+                <div class="grid grid-col-1/3 grid-row-auto gap-0.5" id="image-list-container">
                 </div>
             </div>
         </div>
@@ -106,5 +81,59 @@
             <p class="text-center">Created by: <span class="bold">Yonathan Sihotang</span></p>
         </div>
     </div>
+    <script>
+        const data = [{
+            'category': ['os'],
+            'url': 'https://www.cnet.com/a/img/resize/0ec27620d26374ae7c73e17393ed201651872b74/hub/2020/01/13/6e566b3e-faef-4ffd-9909-01acca997b6d/windows-10-cropped-for-promo.png?auto=webp&fit=crop&height=1200&width=1200',
+            'title': 'Windows 10 Wallpaper'
+        }, {
+            'category': ['os'],
+            'url': 'https://assets-prd.ignimgs.com/2021/06/25/windows-11-button-02-1624642130619.jpg',
+            'title': 'Windows 11'
+        }, {
+            'category': ['os'],
+            'url': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7AKGQ-LqAMFkV4ZY7lbxz7rlmSzPyqGF8ays21CWM8A&s',
+            'title': 'Ubuntu'
+        }, {
+            'category': ['os'],
+            'url': 'https://ubuntuhandbook.org/wp-content/uploads/2024/03/fedora-logo.webp',
+            'title': 'Fedora'
+        }, {
+            'category': ['os'],
+            'url': 'https://cdn0.iconfinder.com/data/icons/flat-round-system/512/archlinux-512.png',
+            'title': 'Arch'
+        }, {
+            'category': ['os'],
+            'url': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm46sfZrpJW91LkiAcWHqfzrOX-Xz8MhTYAIxvvIRWJA&s',
+            'title': 'Kali'
+        }, {
+            'category': ['os'],
+            'url': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDskGTX4CHy-rFbKBUJ0c99rWVNAm-KzCiWOZYuCqq2Q&s',
+            'title': 'Debian'
+        }, {
+            'category': ['os'],
+            'url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Gentoo_Linux_Signet.svg/2048px-Gentoo_Linux_Signet.svg.png',
+            'title': 'Gentoo'
+        }, {
+            'category': ['os'],
+            'url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Manjaro-logo.svg/2048px-Manjaro-logo.svg.png',
+            'title': 'Manjaro'
+        }]
+        let imageListContainer = document.querySelector('#image-list-container')
+        for (let imageInfo of data){
+            let imageElement = document.createElement('div')
+            imageElement.innerHTML = `
+                <div class="w-full">
+                    <img 
+                        class="gallery-image-container aspect-ratio-1/1 max-width-100%" 
+                        src="${imageInfo.url}" 
+                        alt="${imageInfo.name}"
+                        loading="lazy"
+                    >
+                </div>
+                `
+            imageListContainer.appendChild(imageElement)
+        }
+    </script>
 </body>
 </html>
