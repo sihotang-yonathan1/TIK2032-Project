@@ -376,3 +376,7 @@
 .h-auto {
     height: auto;
 }
+
+.font-size-1-rem {
+    font-size: 1rem;
+}
