@@ -36,8 +36,8 @@
     <script src="./static/js/typing.js"></script>
 
 </head>
-<body class="poppins">
-    <div class="flex flex-col h-display-screen">
+<body class="poppins flex flex-col h-screen">
+    <div class="flex flex-col h-full">
         <!-- Header -->
         <div class="flex flex-row px-4% justify-content-space-around align-items-center header-container">
             <div>
@@ -62,101 +62,19 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Main content: flex-row
-        <div class="flex flex-col main-content-container h-full px-0.75">
-            <div class="flex justify-content-center">
-                <h2>Contact</h2>
-            </div>
-            Contact List container
-            <div class="grid grid-template-column-auto grid-template-row-auto gap-0.5 justify-content-center overflow-x-auto flex-grow-1">
-                
-                Contact  container
-                <div class="contact-container column-start-1 column-end-2 rounded p-0.5">
-                    <a href="#" class="flex flex-col align-items-center">
-                        <div class="flex icon-image-container">
-                            <img class="max-w-full" src="./assets/icons/email-svgrepo-com.svg" alt="email_icon">
-                        </div>
-                        <div class="flex flex-col justify-content-center align-items-center">
-                            <h4>Email</h4>
-                            <p>email@email.com</p>
-                        </div>
-                    </a>
-                </div>
-                
-                Contact  container
-                <div class="contact-container column-start-2 column-end-3 flex-col align-items-center rounded p-0.5">
-                    <a href="#" class="flex flex-col align-items-center">
-                        <div class="flex icon-image-container">
-                            <img class="max-w-full" src="./assets/icons/whatsapp-color-svgrepo-com.svg" alt="whatsapp_logo">
-                        </div>
-                        <h4>Whatsapp</h4>
-                        <p>+628xxxxxx</p>
-                    </a>
-                </div>
-                
-                Contact  container
-                <div class="contact-container column-start-3 column-end-4 flex flex-col align-items-center p-0.5 rounded">
-                    <a href="#" class="flex flex-col align-items-center">
-                        <div class="flex icon-image-container">
-                            <img class="max-w-full" src="./assets/icons/telegram-svgrepo-com.svg" alt="telegram_logo">
-                        </div>
-                        <h4>Telegram</h4>
-                        <p>+628xxxxxx</p>
-                    </a>
-                </div>
 
-                Contact  container
-                <div class="contact-container flex flex-col align-items-center p-0.5 rounded">
-                    <a href="#" class="flex flex-col align-items-center">
-                        <div class="flex icon-image-container">
-                            <img class="max-w-full" src="./assets/icons/instagram-1-svgrepo-com.svg" alt="instagram_logo">
-                        </div>
-                        <h4>Instagram</h4>
-                        <p>@username</p>
-                    </a>
-                </div>
-
-                // // Contact  container
-                <div class="contact-container flex flex-col align-items-center p-0.5 rounded">
-                    <a href="#" class="flex flex-col align-items-center">
-                        <div class="flex icon-image-container">
-                            <img class="max-w-full" src="./assets/icons/discord-v2-svgrepo-com.svg" alt="discord_logo">
-                        </div>
-                        <h4>Discord</h4>
-                        <p>username</p>
-                    </a>
-                </div>
-
-                
-                // // Contact  container
-                <div class="contact-container flex flex-col align-items-center p-0.5 rounded">
-                    <a href="#" class="flex flex-col align-items-center">
-                        <div class="flex icon-image-container">
-                            <img class="max-w-full" src="./assets/icons/github-142-svgrepo-com.svg" alt="github_logo">
-                        </div>
-                        <h4>Github</h4>
-                        <p>username</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="flex justify-content-center mt-auto">
-                <p class="italic font-2x-sm">*The logo is found from internet</p>
-            </div>
-        </div> -->
         <!-- Main content -->
-        <div class="flex flex-col main-content-container px-8% align-items-center flex-grow-1">
+        <div class="flex flex-col main-content-container align-items-center flex-grow-1 justify-content-center">
             <!-- Contact Container -->
-            <div class="flex flex-col align-items-center h-full">
+            <div class="flex flex-col  justify-content-center h-full w-full">
                 <!-- Title -->
                 <div class="flex flex-col">
                     <h3 class="font-weight-600 text-center">Contact</h3>
                 </div>
                 
                 <!-- Contact List -->
-                <div class="flex flex-col flex-grow-1 h-full">
-                    <div id="contact-list" class="flex flex-row flex-wrap px-4% gap-0.75 h-full py-3% align-items-center flex-basis-3 flex-grow-1">    
+                <div class="flex flex-col flex-grow-1 h-full align-items-center">
+                    <div id="contact-list" class="flex flex-row flex-wrap px-4% gap-1 h-full py-3% align-items-center flex-basis-1 flex-grow-1 justify-content-center">    
                     </div>
                 </div>
             </div>
@@ -197,8 +115,9 @@
         let contactList = document.querySelector("#contact-list");
 
         function generateContact({name, value, icon}, element){
+            // TODO: use proper template instead of using innerHTML
             htmlTemplate = `
-            <div class="contact-container flex flex-col align-items-center p-0.5 rounded">
+            <div class="contact-container flex flex-col align-items-center py-3% rounded">
                 <a href="#" class="flex flex-col align-items-center">
                     <div class="flex icon-image-container">
                         <img class="max-w-full" src="./assets/icons/${icon}-svgrepo-com.svg" alt="${name}_logo">
