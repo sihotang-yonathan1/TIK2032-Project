@@ -89,36 +89,42 @@
         const contactData = [{
             'name': 'email',
             'value': 'email@email.com',
-            'icon': 'email'
+            'icon': 'email',
+            'url': '#'
         }, {
             'name': 'Whatsapp',
             'value': '+628xxxxxx',
-            'icon': 'whatsapp-color'
+            'icon': 'whatsapp-color',
+            'url': '#'
         }, {
             'name': 'Telegram',
             'value': '+628xxxxxx',
             'icon': 'telegram',
+            'url': '#'
         }, {
             'name': 'Instagram',
             'value': '@username',
-            'icon': 'instagram-1'
+            'icon': 'instagram-1',
+            'url': '#'
         }, {
             'name': 'Discord',
             'value': 'username',
-            'icon': 'discord-v2'
+            'icon': 'discord-v2',
+            'url': '#'
         }, {
             'name': 'Github',
-            'value': 'username',
-            'icon': 'github-142'
+            'value': 'sihotang-yonathan1',
+            'icon': 'github-142',
+            'url': 'https://github.com/sihotang-yonathan1'
         }]
 
         let contactList = document.querySelector("#contact-list");
 
-        function generateContact({name, value, icon}, element){
+        function generateContact({name, value, icon, url}, element){
             // TODO: use proper template instead of using innerHTML
             htmlTemplate = `
             <div class="contact-container flex flex-col align-items-center py-3% rounded">
-                <a href="#" class="flex flex-col align-items-center">
+                <a href="${url}" class="flex flex-col align-items-center" target="_blank">
                     <div class="flex icon-image-container">
                         <img class="max-w-full" src="./assets/icons/${icon}-svgrepo-com.svg" alt="${name}_logo">
                     </div>
@@ -136,7 +142,7 @@
             element.appendChild(contactElement)
 
         }
-        contactData.forEach((x) => generateContact({name: x.name, value: x.value, icon: x.icon}, contactList))
+        contactData.forEach((x) => generateContact({name: x.name, value: x.value, icon: x.icon, url: x.url}, contactList))
     </script>
 </body>
 </html>
