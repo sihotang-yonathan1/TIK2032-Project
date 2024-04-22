@@ -89,6 +89,10 @@ body {
     width: 100%;
 }
 
+.index-image-parent-container {
+    max-width: 200px;
+}
+
 .quote-container {
     background-color: var(--primary-color);
     max-width: 600px;
