@@ -1,0 +1,173 @@
+:root{
+    /* Source: https://colorhunt.co/palette/f8f6e397e7e16ad4dd7aa2e3 */
+    --primary-color: #F8F6E3; /* beige */
+    --secondary-color: #97E7E1; /*Teal*/
+    --third-color: #6AD4DD;
+    --forth-color: #7AA2E3;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+body {
+    margin: unset;
+}
+
+.header-container {
+    background-color: var(--secondary-color);
+}
+
+.main-content-container {
+    background-color: var(--primary-color);
+}
+
+.footer-container {
+    background-color: var(--secondary-color);
+}
+
+.blog-element-container {
+    border: 1px;
+    border-style: solid;
+    
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+    
+    padding: 0.75rem;
+    border-radius: 1rem;
+}
+
+.nav-element:hover {
+    color: grey;
+}
+
+.skill-element-container {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 1.2rem;
+    width: 100px;
+    height: 100px;
+}
+
+.skill-element-container:hover{
+    background-color: white;
+    color: black;
+    
+}
+
+.icon-image-container {
+    width: 50px;
+    height: 50px;
+}
+
+.contact-container {
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    min-width: 250px;
+    width: 100%;
+}
+
+.contact-container:hover{
+    background-color: white;
+    
+}
+
+.gallery-image-container {
+    width: 100%;
+    object-fit:contain;
+}
+
+.index-photo-image {
+    width: 100%;
+}
+
+.index-image-parent-container {
+    max-width: 200px;
+}
+
+.quote-container {
+    background-color: var(--primary-color);
+    max-width: 600px;
+}
+
+/* Utils */
+.bg-primary-color {
+    background-color: var(--primary-color);
+}
+
+.bg-secondary-color {
+    background-color: var(--secondary-color);
+}
+
+.bg-third-color {
+    background-color: var(--third-color);
+}
+
+.bg-forth-color {
+    background-color: var(--forth-color);
+}
+
+/* End of utils */
+
+#menu-icon-container {
+    display: none;
+}
+
+.sidebar-element-selected {
+    color: black;
+}
+
+.sidebar-element{
+    color: #eaeaea;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.sidebar-element:hover {
+    color: black;
+    background-color: #e5e5e5;
+}
+
+.sidebar-link{
+    color: inherit
+}
+
+.sidebar-link:hover{
+    color: inherit;
+}
+
+#sidebar-menu-list-container {
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+#sidebar-container {
+    display: none;
+}
+
+.programming-language-container {
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .index-photo-image {
+        height: 25%
+    }
+
+    #normal-menu-container {
+        display: none;
+    }
+
+    #menu-icon-container{
+        display: flex;
+        visibility: visible;
+    }
+}

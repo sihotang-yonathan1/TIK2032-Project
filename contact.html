@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    
+    <link rel="stylesheet" href="./static/css/styles.css">
+    <link rel="stylesheet" href="./static/css/utils.css">
+
+    <!-- Utils: root -->
+    <link rel="stylesheet" href="./static/css/utils/margin.css">
+    <link rel="stylesheet" href="./static/css/utils/padding.css">
+    <link rel="stylesheet" href="./static/css/utils/position.css">
+
+    <!-- Utils: display -->
+    <link rel="stylesheet" href="./static/css/utils/display/flex.css">
+    <link rel="stylesheet" href="./static/css/utils/display/grid.css">
+
+    <!-- Utils: font-styling -->
+    <link rel="stylesheet" href="./static/css/fonts/styles.css">
+    <link rel="stylesheet" href="./static/css/utils/font/weight.css">
+
+    <!-- <link rel="stylesheet" href="./static/css/fonts/poppins.css"> -->
+    <link rel="stylesheet" href="./static/css/fonts/roboto.css">
+
+    <!-- Google Material icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- External js -->
+    <script src="./static/js/typing.js"></script>
+
+</head>
+<body class="poppins flex flex-col h-screen">
+    <div class="flex flex-col h-full">
+        <!-- Header -->
+        <div class="flex flex-row px-4% justify-content-space-around align-items-center header-container">
+            <div>
+                <p class="font-weight-600">Yonathan</p>
+            </div>
+            <div class="flex flex-row gap-0.75">
+                <!-- Nav element -->
+                <div class="nav-element">
+                    <a href="./index.html" ">Home</a>
+                </div>
+                
+                <div class="nav-element">
+                    <a href="./gallery.html">Gallery</a>
+                </div>
+                
+                <div class="nav-element">
+                    <a href="./blog.html">Blog</a>
+                </div>
+                
+                <div class="nav-element">
+                    <a href="./contact.html" class="font-weight-500">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="flex flex-col main-content-container align-items-center flex-grow-1 justify-content-center">
+            <!-- Contact Container -->
+            <div class="flex flex-col  justify-content-center h-full w-full">
+                <!-- Title -->
+                <div class="flex flex-col">
+                    <h3 class="font-weight-600 text-center">Contact</h3>
+                </div>
+                
+                <!-- Contact List -->
+                <div class="flex flex-col flex-grow-1 h-full align-items-center">
+                    <div id="contact-list" class="flex flex-row flex-wrap px-4% gap-1 h-full py-3% align-items-center flex-basis-1 flex-grow-1 justify-content-center">    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer: flex-col -->
+        <div class="flex flex-col justify-content-center align-items-center footer-container">
+            <p class="text-center font-sm">Created by: <span class="bold">Yonathan Sihotang</span></p>
+        </div>
+    </div>
+    <script>
+        const contactData = [{
+            'name': 'email',
+            'value': 'email@email.com',
+            'icon': 'email',
+            'url': '#'
+        }, {
+            'name': 'Whatsapp',
+            'value': '+628xxxxxx',
+            'icon': 'whatsapp-color',
+            'url': '#'
+        }, {
+            'name': 'Telegram',
+            'value': '+628xxxxxx',
+            'icon': 'telegram',
+            'url': '#'
+        }, {
+            'name': 'Instagram',
+            'value': '@username',
+            'icon': 'instagram-1',
+            'url': '#'
+        }, {
+            'name': 'Discord',
+            'value': 'username',
+            'icon': 'discord-v2',
+            'url': '#'
+        }, {
+            'name': 'Github',
+            'value': 'sihotang-yonathan1',
+            'icon': 'github-142',
+            'url': 'https://github.com/sihotang-yonathan1'
+        }]
+
+        let contactList = document.querySelector("#contact-list");
+
+        function generateContact({name, value, icon, url}, element){
+            // TODO: use proper template instead of using innerHTML
+            htmlTemplate = `
+            <div class="contact-container flex flex-col align-items-center py-3% rounded">
+                <a href="${url}" class="flex flex-col align-items-center" target="_blank">
+                    <div class="flex icon-image-container">
+                        <img class="max-w-full" src="./assets/icons/${icon}-svgrepo-com.svg" alt="${name}_logo">
+                    </div>
+                    <div>
+                        <h4 class="font-weight-500 text-center">${name}</h4>
+                        <p>${value}</p>
+                    </div
+                </a>
+            </div>
+            `
+
+            let contactElement = document.createElement('div')
+            contactElement.innerHTML = htmlTemplate
+            
+            element.appendChild(contactElement)
+
+        }
+        contactData.forEach((x) => generateContact({name: x.name, value: x.value, icon: x.icon, url: x.url}, contactList))
+    </script>
+</body>
+</html>

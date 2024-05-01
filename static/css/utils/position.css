@@ -1,0 +1,19 @@
+/* Layouting: position */
+.sticky {
+    position: sticky;
+}
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.static {
+    position: static;
+}
