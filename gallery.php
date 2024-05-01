@@ -39,29 +39,7 @@
 <body class="poppins">
     <div class="flex flex-col h-display-screen">
         <!-- Header -->
-        <div class="flex flex-row px-4% justify-content-space-around align-items-center header-container">
-            <div>
-                <p class="font-weight-600">Yonathan</p>
-            </div>
-            <div class="flex flex-row gap-0.75">
-                <!-- Nav element -->
-                <div class="nav-element">
-                    <a href="./index.html">Home</a>
-                </div>
-                
-                <div class="nav-element">
-                    <a href="./gallery.html" class="font-weight-500">Gallery</a>
-                </div>
-                
-                <div class="nav-element">
-                    <a href="./blog.html">Blog</a>
-                </div>
-                
-                <div class="nav-element">
-                    <a href="./contact.html">Contact</a>
-                </div>
-            </div>
-        </div>
+        <?php require_once('./template/component/header.php') ?>
 
         <!-- Main content: flex-row -->
         <div class="flex flex-col main-content-container px-4% flex-grow-1">
@@ -77,10 +55,9 @@
         </div>
 
         <!-- Footer: flex-col -->
-        <div class="flex flex-col justify-content-center align-items-center footer-container">
-            <p class="text-center">Created by: <span class="bold">Yonathan Sihotang</span></p>
-        </div>
+        <?php require_once('./template/component/footer.php') ?>
     </div>
+    
     <script>
         const data = [{
             'category': ['os'],

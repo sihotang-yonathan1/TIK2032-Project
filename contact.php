@@ -39,29 +39,7 @@
 <body class="poppins flex flex-col h-screen">
     <div class="flex flex-col h-full">
         <!-- Header -->
-        <div class="flex flex-row px-4% justify-content-space-around align-items-center header-container">
-            <div>
-                <p class="font-weight-600">Yonathan</p>
-            </div>
-            <div class="flex flex-row gap-0.75">
-                <!-- Nav element -->
-                <div class="nav-element">
-                    <a href="./index.html" ">Home</a>
-                </div>
-                
-                <div class="nav-element">
-                    <a href="./gallery.html">Gallery</a>
-                </div>
-                
-                <div class="nav-element">
-                    <a href="./blog.html">Blog</a>
-                </div>
-                
-                <div class="nav-element">
-                    <a href="./contact.html" class="font-weight-500">Contact</a>
-                </div>
-            </div>
-        </div>
+        <?php require_once('./template/component/header.php')?>
 
         <!-- Main content -->
         <div class="flex flex-col main-content-container align-items-center flex-grow-1 justify-content-center">
@@ -81,9 +59,7 @@
         </div>
 
         <!-- Footer: flex-col -->
-        <div class="flex flex-col justify-content-center align-items-center footer-container">
-            <p class="text-center font-sm">Created by: <span class="bold">Yonathan Sihotang</span></p>
-        </div>
+        <?php require_once('./template/component/footer.php') ?>
     </div>
     <script>
         const contactData = [{

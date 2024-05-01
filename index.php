@@ -4,68 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="./static/css/styles.css">
-    <link rel="stylesheet" href="./static/css/utils.css">
-
-    <!-- Utils: root -->
-    <link rel="stylesheet" href="./static/css/utils/margin.css">
-    <link rel="stylesheet" href="./static/css/utils/padding.css">
-    <link rel="stylesheet" href="./static/css/utils/position.css">
-
-    <!-- Utils: display -->
-    <link rel="stylesheet" href="./static/css/utils/display/flex.css">
-    <link rel="stylesheet" href="./static/css/utils/display/grid.css">
-
-    <!-- Utils: font-styling -->
-    <link rel="stylesheet" href="./static/css/fonts/styles.css">
-    <link rel="stylesheet" href="./static/css/utils/font/weight.css">
-
-    <!-- <link rel="stylesheet" href="./static/css/fonts/poppins.css"> -->
-    <link rel="stylesheet" href="./static/css/fonts/roboto.css">
-
-    <!-- Google Material icon -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    
+    <!-- CSS Dependency -->
+    <?php require_once('./template/component/css_dependency.php') ?>
+    
     <!-- External js -->
-    <script src="./static/js/typing.js"></script>
+    <?php require_once('./template/component/js_head_dependency.php')?>
 
 </head>
 <body class="poppins relative flex flex-col h-screen">
     <div class="flex flex-col h-full relative" id="content">
-        <!-- Header -->
-        <div class="flex flex-row px-4% justify-content-space-around align-items-center header-container relative">
-            <div>
-                <p class="font-weight-600">Yonathan</p>
-            </div>
-            <div class="flex flex-row gap-0.75" id="normal-menu-container">
-                <!-- Nav element -->
-                <div class="nav-element">
-                    <a href="./index.html" class="font-weight-500">Home</a>
-                </div>
-                
-                <div class="nav-element">
-                    <a href="./gallery.html">Gallery</a>
-                </div>
-                
-                <div class="nav-element">
-                    <a href="./blog.html">Blog</a>
-                </div>
-                
-                <div class="nav-element">
-                    <a href="./contact.html">Contact</a>
-                </div>
-            </div>
-            <div id="menu-icon-container" class="relative">
-                <span class="material-symbols-outlined material-icons">
-                    menu
-                </span>
-            </div>
-        </div>
+        <?php require_once("./template/component/header.php") ?>
 
         <div class="flex flex-row px-8% align-items-center justify-content-center main-content-container gap-0.75 py-4% flex-grow-1">
             <!-- Image description -->
@@ -134,9 +83,7 @@
         </div>
 
         <!-- Footer: flex-col -->
-        <div class="flex flex-col justify-content-center align-items-center footer-container">
-            <p class="text-center">Created by: <span class="font-weight-400">Yonathan Sihotang</span></p>
-        </div>
+        <?php require_once('./template/component/footer.php') ?>
     </div>
 
     <!-- Sidebar -->
