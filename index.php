@@ -14,6 +14,7 @@
 </head>
 <body class="poppins relative flex flex-col h-screen">
     <div class="flex flex-col h-full relative" id="content">
+        <?php require_once('./backend/connect.php') ?>
         <?php require_once("./template/component/header.php") ?>
 
         <div class="flex flex-row px-8% align-items-center justify-content-center main-content-container gap-0.75 py-4% flex-grow-1">
