@@ -20,6 +20,13 @@ class BlogHandler extends RequestHandler {
         mysqli_free_result($result);
         return $data;
     }
+
+    function POST(){
+        $prepared_statement = $this->connection->prepare("
+            INSERT blog (title, content, modified_time, author)
+            VALUE (?, ?, ?, ?)
+        ");
+    }
 }
 
 
