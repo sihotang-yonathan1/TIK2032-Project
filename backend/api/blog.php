@@ -16,7 +16,8 @@ class BlogHandler extends RequestHandler {
                 blog
         ");
 
-        $data = $result->fetch_all();
+        // return data in association array
+        $data = $result->fetch_all(MYSQLI_ASSOC);
         mysqli_free_result($result);
         return $data;
     }
