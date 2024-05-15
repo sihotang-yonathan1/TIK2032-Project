@@ -10,7 +10,7 @@ class BlogHandler extends RequestHandler {
     function GET(){
         $result = $this->connection->query("
             SELECT 
-                id, title, modified_time, 
+                id, title, modified_date, 
                 content, author 
             FROM
                 blog
