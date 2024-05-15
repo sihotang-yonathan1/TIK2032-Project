@@ -1,3 +1,8 @@
+<?php
+    $blog_api_url = "http://localhost:80/tugas-4-php-web\TIK2032-Project\backend\api\blog.php";
+    $blogData = file_get_contents($blog_api_url);
+    $blog_data = json_decode($blogData);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +53,44 @@
                 </div>
 
                 <!-- Blog List -->
+                <!-- <div id="blog-list">
+                </div> -->
                 <div id="blog-list">
+                    <?php foreach($blog_data as $data):  ?>
+                        <div class="blog-element-container">
+                        
+                            <!-- Blog Title -->
+                            <div>
+                                <h3 class="font-2x-lg text-center font-weight-500"><?= $data->title ?></h3>
+                            </div>
+                            
+                            <!-- Blog Metadata -->
+                            <div class="flex flex-row gap-0.5 justify-content-center">
+                                <!-- Upload time -->
+                                <div class="flex flex-row align-items-center">
+                                    <span class="material-symbols-outlined material-icons">
+                                        schedule
+                                    </span>
+                                    <p class="font-sm">
+                                        <?= $data->modified_date ?>
+                                    </p>
+                                </div>
+
+                                <div class="flex flex-row align-items-center">
+                                    <span class="material-symbols-outlined material-icons">
+                                        person
+                                    </span>
+                                    <p class="font-sm">
+                                        <?= $data->author ?>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Blog content -->
+                            <div>
+                                <?= $data->content ?>
+                            </div>
+                        </div>
+                    <?php endforeach ?>
                 </div>
             </div>
         </div>
@@ -57,91 +99,5 @@
         <?php require_once('./template/component/footer.php') ?>
     </div>
 
-    <!-- Javascript  -->
-    <script>
-        const data = [{
-            'title': "Performa single core Intel Meteor Lake lebih rendah dibanding pendahulunya",
-            'author': 'Yonathan Sihotang',
-            'modified_date': "2024-03-23",
-            'content': `
-                <p>Munculnya Intel Meteor Lake membuat orang bertanya-tanya mengenai performa yang diberikan. Berdasarkan hasil sampel yang diberikan Intel dalam model laptop Asus Zenbook, terdapat sedikit penurunan performa single corenya. </p>
-                <p>Pihak Intel sendiri membuat CPU ini dengan fokus untuk menambah efisiensi daya dibanding generasi-generasi sebelumnya.</p>
-                <p>Hal ini terbukti dari berbagai benchmark yang telah dibuat, memang benar terjadi peningkatan oerforma per watt-nya, namun performa ini masih kalah dengan laptop yang arsitektur ARM seperti Apple M1</p>
-                <p>Hadirnya laptop ini, diharapkan membuat laptop dapat digunakan untuk program yang berat namun dapat dipakai dalam jangka waktu yang lebih lama</p>
-                `
-        }, {
-            'title': "One UI 6.1 rilis",
-            'author': 'Yonathan Sihotang',
-            'modified_date': "2024-03-23",
-            'content': `
-                <p>One UI adalah UI yang dibuat oleh Samsung untuk hp buatan mereka. 
-                    Kali ini, mereka membuat update baru yaitu One UI 6.1 yang memungkinkan perangkat flagship 2023 mendapat update yang menarik seperti Circle to Search yang sebelumnya hadir pada Jajaran S24. 
-                    Fitur ini sudah dirilis sejak Maret 2024. Pada update ini, terdapat beberapa perbaikan dari update-update berikutnya
-                </p>`
-        }, {
-            'title': "LPCAMM2 jadi standar baru RAM",
-            'author': 'Yonathan Sihotang',
-            'modified_date': "2024-03-23",
-            'content': `
-                <p>RAM merupakan salah satu bagian penting dari komponen komputer. Pada umumnya terdapat dua jenis fisik RAM yang umum digunakan sehari-hari. 
-                Yang pertama adalah RAM yang bertipe SODIMM dengan tipe RAM DDR. Ram tipe ini dapat diganti dengan mudah karena pada perangkatnya terdapat slot RAM. 
-                Meskipun RAM ini mudah untuk dipasang, RAM dengan jenis fisik seperti ini memiliki kecepatan yang lebih rendah karena harus menyusuri jalur data yang lebih panjang Jenis fisik RAM lainnya adalah RAM untuk penggunaan mobile yakni LPDDR. 
-                LPDDR adalah jenis RAM yang disolder ke perangkat sehingga tidak dapat diganti. Keuntungan dari jenis ini adalah jumlah daya yang digunakan lebih kecil dan kecepatan data lebih cepat karena memiliki jalur data yang lebih pendek.
-                </p>
-                <p>Dengan adanya keterbatasan dari kemudahan untuk upgrade dan kecepatan RAM, beberapa vendor berusaha untuk membuat jenis baru.
-                    Salah satunya adalah DELL. Sebelumnya mereka mengumumkan jenis fisik baru, yaitu CAMM. Saat ini, model CAMM hanya terdapat pada model-model tertentu laptop buatan DELL. 
-                    Berikutnya, Samsung mengembangkan model dari DELL menjadi lebih kecil, model ini disebut oleh Samsung sebagai LPCAMM. Model ini lebih kecil dari CAMM, namun lebih cepat dan efisien dibanding model CAMM buatan DELL. 
-                    Kemudian, Micron mengembangkan model baru yang bernama LPCAMM2 dan dipamerkan CES2024. JEDEC kemudian menyetujui LPCAMM2 sebagai model standar baru RAM berikutnya
-                </p>`
-        }]
-
-        // TODO: sanitize input to prevent xss or js injection
-        function generateBlog({title, author, modified_date, content}, parentElement){
-            // TODO: set flexible template and use the template from available html file
-            const htmlTemplate = `
-                <!-- Blog Title -->
-                <div>
-                    <h3 class="font-2x-lg text-center font-weight-500">${title}</h3>
-                </div>
-                
-                <!-- Blog Metadata -->
-                <div class="flex flex-row gap-0.5 justify-content-center">
-                    <!-- Upload time -->
-                    <div class="flex flex-row align-items-center">
-                        <span class="material-symbols-outlined material-icons">
-                            schedule
-                        </span>
-                        <p class="font-sm">${modified_date}</p>
-                    </div>
-
-                    <div class="flex flex-row align-items-center">
-                        <span class="material-symbols-outlined material-icons">
-                            person
-                        </span>
-                        <p class="font-sm">${author}</p>
-                    </div>
-                </div>
-                <!-- Blog content -->
-                <div>
-                    ${content}
-                </div>
-            `
-            const blogElementContainer = document.createElement('div')
-            blogElementContainer.className = 'blog-element-container'
-            blogElementContainer.innerHTML = htmlTemplate
-
-            parentElement.append(blogElementContainer)
-        }
-
-        const blogListElement = document.getElementById('blog-list')
-        for (let blogData of data) {
-            generateBlog({
-                title : blogData.title,
-                author: blogData.author,
-                content: blogData.content,
-                modified_date: blogData.modified_date
-            }, blogListElement)
-        }
-    </script>
 </body>
 </html>
